@@ -17,6 +17,8 @@
         nav {
             background-color: #333;
             padding: 10px;
+            position: sticky;
+            top: 0;
         }
         nav a {
             color: white;
@@ -26,15 +28,13 @@
         }
         section {
             padding: 40px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
         }
-        .product {
+        #shop .product {
             background: white;
             margin: 20px;
             padding: 20px;
             width: 250px;
+            display: inline-block;
             border-radius: 10px;
             box-shadow: 0 0 10px gray;
         }
@@ -70,12 +70,19 @@
 </header>
 
 <nav>
-    <a href="#">Home</a>
-    <a href="#">Shop</a>
-    <a href="#">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#contact">Contact</a>
 </nav>
 
-<section>
+<section id="home">
+    <h2>Welcome to The Desi Fit</h2>
+    <p>Your favorite desi clothing brand!</p>
+</section>
+
+<section id="shop">
+    <h2>Shop Our Products</h2>
+
     <div class="product">
         <h3>Desi Street Hoodie</h3>
         <img onclick="alert('Replace this with your product image later')" alt="Click to add image">
@@ -91,7 +98,11 @@
     </div>
 
     <!-- ADD MORE PRODUCTS HERE -->
-    <!-- Copy the above <div class="product"> block and change name, price, etc -->
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: contact@thedesifit.com</p>
 </section>
 
 <footer>
